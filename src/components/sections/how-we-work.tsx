@@ -2,27 +2,28 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2, MessageSquare, Map, Cog, TrendingUp } from "lucide-react";
+import ElectricBorder from "@/components/ui/electric-border";
 
 const steps = [
   {
     icon: MessageSquare,
-    title: "Discovery Call (Free)",
-    description: "Share your goals and challenges. We'll assess fit and outline next steps.",
+    title: "1. Discover",
+    description: "Audit your funnel, tools, and GTM assumptions",
   },
   {
     icon: Map,
-    title: "Strategy Sprint (Week 1)",
-    description: "Deep dive: audit your funnel, tools, and GTM assumptions. Deliver a prioritized roadmap.",
+    title: "2. Design",
+    description: "Build your automation architecture + revenue model",
   },
   {
     icon: Cog,
-    title: "Build & Implement (Weeks 2–8)",
-    description: "We configure systems, document processes, and train your team—while you stay focused on your business.",
+    title: "3. Deploy",
+    description: "Implement workflows, dashboards, and playbooks",
   },
   {
     icon: TrendingUp,
-    title: "Review & Scale (Ongoing)",
-    description: "Monthly performance reviews, iterative optimizations, and support as you grow.",
+    title: "4. Optimize",
+    description: "Review performance, iterate, and scale",
   },
 ];
 
@@ -51,15 +52,24 @@ export function HowWeWorkSection() {
         <div className="max-w-4xl mx-auto">
           <div className="space-y-8 mb-16">
             {steps.map((step, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="flex items-start gap-6 p-6 rounded-2xl bg-white/[0.02] border border-white/[0.08]">
-                <div className="shrink-0 p-4 bg-white/[0.05] rounded-xl text-white/70">
-                  <step.icon className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-white/50">{step.description}</p>
-                </div>
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
+                <ElectricBorder
+                  color="#6A3093"
+                  speed={2}
+                  chaos={0.12}
+                  thickness={2}
+                  style={{ borderRadius: 16 }}
+                >
+                  <div className="flex items-start gap-6 p-6 rounded-2xl bg-[#030303]/90 backdrop-blur-sm border border-white/[0.08]">
+                    <div className="shrink-0 p-4 bg-white/[0.05] rounded-xl text-white/70">
+                      <step.icon className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
+                      <p className="text-white/50">{step.description}</p>
+                    </div>
+                  </div>
+                </ElectricBorder>
               </motion.div>
             ))}
           </div>

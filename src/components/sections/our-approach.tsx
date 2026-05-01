@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Compass, Search, PenTool, Rocket, BarChart } from "lucide-react";
+import ElectricBorder from "@/components/ui/electric-border";
 
 const steps = [
   {
@@ -50,16 +51,26 @@ export function OurApproachSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {steps.map((step, i) => (
-            <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="relative p-8 rounded-2xl border border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.04] transition-colors group">
-              <div className="absolute -top-4 -right-4 text-7xl font-bold text-white/[0.03] group-hover:text-white/[0.05] transition-colors pointer-events-none">
-                {step.number}
-              </div>
-              <div className="p-3 bg-white/[0.05] rounded-xl w-fit mb-6 text-indigo-400">
-                <step.icon className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
-              <p className="text-white/50 text-sm leading-relaxed">{step.description}</p>
+            <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.15 }} className="h-full">
+              <ElectricBorder
+                color="#6A3093"
+                speed={1.2}
+                chaos={0.09}
+                thickness={2}
+                style={{ borderRadius: 16 }}
+                className="h-full"
+              >
+                <div className="relative h-full p-8 rounded-2xl border border-white/[0.08] bg-[#030303]/90 backdrop-blur-sm hover:bg-white/[0.04] transition-colors group">
+                  <div className="absolute -top-4 -right-4 text-7xl font-bold text-white/[0.03] group-hover:text-white/[0.05] transition-colors pointer-events-none">
+                    {step.number}
+                  </div>
+                  <div className="p-3 bg-white/[0.05] rounded-xl w-fit mb-6 text-indigo-400">
+                    <step.icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                  <p className="text-white/50 text-sm leading-relaxed">{step.description}</p>
+                </div>
+              </ElectricBorder>
             </motion.div>
           ))}
         </div>
