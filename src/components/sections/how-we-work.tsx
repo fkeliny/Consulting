@@ -1,29 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, MessageSquare, Map, Cog, TrendingUp } from "lucide-react";
+import { CheckCircle2, Cog, Search, PenTool, Rocket, BarChart } from "lucide-react";
 import ElectricBorder from "@/components/ui/electric-border";
 
 const steps = [
   {
-    icon: MessageSquare,
-    title: "1. Discover",
-    description: "Audit your funnel, tools, and GTM assumptions",
+    icon: Search,
+    title: "Phase 1: Discovery & Audit (Week 1)",
+    description: "We deep-dive into your current funnel, tech stack, and GTM assumptions. We identify bottlenecks, data gaps, and quick wins.",
+    deliverable: "Prioritized Growth Roadmap",
   },
   {
-    icon: Map,
-    title: "2. Design",
-    description: "Build your automation architecture + revenue model",
+    icon: PenTool,
+    title: "Phase 2: Design & Architecture (Weeks 2–3)",
+    description: "We map out your automation workflows, define your revenue model, and craft your GTM messaging framework. No code is written yet; we blueprint the perfect system.",
+    deliverable: "System Architecture & Playbooks",
   },
   {
-    icon: Cog,
-    title: "3. Deploy",
-    description: "Implement workflows, dashboards, and playbooks",
+    icon: Rocket,
+    title: "Phase 3: Build & Implement (Weeks 4–8)",
+    description: "We configure your CRM, set up automations (Zapier/Make), build custom dashboards, and integrate your tools. You stay focused on your business while we handle the heavy lifting.",
+    deliverable: "Fully Operational Revenue Engine",
   },
   {
-    icon: TrendingUp,
-    title: "4. Optimize",
-    description: "Review performance, iterate, and scale",
+    icon: BarChart,
+    title: "Phase 4: Optimize & Scale (Ongoing)",
+    description: "We review performance monthly, iterate on what’s working, and scale what’s profitable. We turn data into decisions.",
+    deliverable: "Continuous Growth & Support",
   },
 ];
 
@@ -45,8 +49,11 @@ export function HowWeWorkSection() {
             How We Work
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-            No fluff. <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-indigo-300">Just results.</span>
+            From discovery to deployment in <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-indigo-300">4 clear phases.</span>
           </h2>
+          <p className="text-white/40 max-w-2xl mx-auto text-lg mb-12">
+            Most consulting stops at advice. We go further: we build the systems that make growth repeatable. Here is exactly what happens when you partner with us.
+          </p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
@@ -64,9 +71,12 @@ export function HowWeWorkSection() {
                     <div className="shrink-0 p-4 bg-white/[0.05] rounded-xl text-white/70">
                       <step.icon className="w-6 h-6" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                      <p className="text-white/50">{step.description}</p>
+                      <p className="text-white/50 mb-4">{step.description}</p>
+                      <div className="inline-flex items-center gap-2 text-sm text-indigo-400 bg-indigo-400/10 px-3 py-1.5 rounded-lg font-medium border border-indigo-400/20">
+                        {step.deliverable}
+                      </div>
                     </div>
                   </div>
                 </ElectricBorder>

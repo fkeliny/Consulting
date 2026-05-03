@@ -75,12 +75,14 @@ function HeroGeometric({
     badge = "Consulting for Automation, Revenue & Go-To-Market Strategy",
     title1 = "Build Predictable",
     title2 = "Growth.",
-    title3 = "Automate What Matters.",
+    title3 = "Automate What ",
+    title4 = "Matters.",
 }: {
     badge?: string;
     title1?: string;
     title2?: string;
     title3?: string;
+    title4?: string;
 }) {
     const fadeUpVariants = {
         hidden: { opacity: 0, y: 30 },
@@ -182,6 +184,9 @@ function HeroGeometric({
                             <br />
                             <span className="bg-clip-text text-transparent bg-gradient-to-b from-white/90 to-white/60 text-3xl sm:text-5xl md:text-7xl">
                                 {title3}
+                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300">
+                                    {title4}
+                                </span>
                             </span>
                         </h1>
                     </motion.div>
