@@ -60,7 +60,7 @@ export function OurApproachSection() {
                 style={{ borderRadius: 16 }}
                 className="h-full"
               >
-                <div className="relative h-full p-8 rounded-2xl border border-white/[0.08] bg-[#030303]/90 backdrop-blur-sm hover:bg-white/[0.04] transition-colors group">
+                <div className="relative h-full p-8 rounded-2xl border border-white/[0.08] bg-[#030303]/90 hover:bg-white/[0.04] transition-colors group">
                   <div className="absolute -top-4 -right-4 text-7xl font-bold text-white/[0.03] group-hover:text-white/[0.05] transition-colors pointer-events-none">
                     {step.number}
                   </div>

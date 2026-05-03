@@ -54,6 +54,8 @@ export default function ElectricBorder({
             background: `conic-gradient(from 0deg, transparent 70%, ${color} 100%)`,
             filter: `blur(${blurAmount}px)`,
             opacity: 0.8,
+            willChange: "transform",
+            transform: "translateZ(0)",
           }}
         />
         {/* Core glow */}
@@ -71,6 +73,8 @@ export default function ElectricBorder({
             width: "200%",
             height: "200%",
             background: `conic-gradient(from 0deg, transparent 80%, ${color} 100%)`,
+            willChange: "transform",
+            transform: "translateZ(0)",
           }}
         />
       </div>

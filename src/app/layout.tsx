@@ -8,7 +8,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Raveact",
+  title: "Toroscale",
   description:
     "We help B2B companies design automated revenue systems and execute go-to-market strategies that scale—without the chaos.",
   keywords: [

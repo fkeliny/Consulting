@@ -60,7 +60,7 @@ export function HowWeWorkSection() {
                   thickness={2}
                   style={{ borderRadius: 16 }}
                 >
-                  <div className="flex items-start gap-6 p-6 rounded-2xl bg-[#030303]/90 backdrop-blur-sm border border-white/[0.08]">
+                  <div className="flex items-start gap-6 p-6 rounded-2xl bg-[#030303]/90 border border-white/[0.08]">
                     <div className="shrink-0 p-4 bg-white/[0.05] rounded-xl text-white/70">
                       <step.icon className="w-6 h-6" />
                     </div>
